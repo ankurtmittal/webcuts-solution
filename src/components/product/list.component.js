@@ -13,9 +13,9 @@ export default function List() {
     },[])
 
     const fetchProducts = async () => {
-        await axios.get(`http://127.0.0.1:8000/api/products`).then(({data})=>{
-            setProducts(data)
-        })
+        // await axios.get(`http://127.0.0.1:8000/api/products`).then(({data})=>{
+        //     setProducts(data)
+        // })
     }
 
     const deleteProduct = async (id) => {

@@ -1,0 +1,98 @@
+.main-aboutus {
+    display: flex;
+    margin: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+  
+  .aboutus-section {
+    width: calc(48% - 20px); 
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  
+  .specification-section img {
+    width: calc(100%); 
+    height: 300px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-left: 50px solid rgb(0, 113, 128);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 50% 50% 70% 70% / 100% 100% 0% 70%; /* Top-left, top-right, bottom-right, bottom-left */
+   /* border-radius: 8px;  */
+    }
+    @media screen and (max-width:768px) {
+        .main-aboutus {
+            margin: 0px;
+            justify-content: space-between;
+        }
+          .aboutus-section {
+            width: calc(100%); 
+          }
+    }
+    @media screen and (min-width:769px) and (max-width:1080px) {
+        .main-aboutus {
+            margin: 0px;
+            justify-content: space-between;
+            width: 95%;
+            margin-left: 20px;
+            margin-right: 20px;
+          }
+          .specification-section img {
+            margin-top: 60px;
+            }
+      }
+   
+    .ourmission-section img {
+        width: 800px;
+        height: 500px;
+        display: block; /* Ensures image is centered properly */
+        margin: 0 auto; /* Centers the image horizontally */
+        margin-top: 50px;
+        margin-bottom: 50px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        border-radius: 50% 10% 50% 10% / 50% 10% 50% 10%;
+        border : 2px solid blue;
+    }
+
+    .ourmission-section{
+        margin-top: 50px;
+    }
+    .ourmission-section p{
+    font-size: 20px;
+    }
+    
+    @media screen and (max-width:768px) {
+      .main-aboutus .ourmission-section {
+        margin-left: 10px;
+        width: 96%;
+        }
+        .ourmission-section img {
+            width: 350px;
+            height: 220px;
+            display: block; /* Ensures image is centered properly */
+       }
+    }
+
+    @media screen and (min-width:769px) and (max-width:1080px) {
+        .main-aboutus .ourmission-section {
+            margin: 0px;
+            justify-content: space-between;
+            width: 95%;
+            margin-left: 20px;
+            margin-right: 20px;
+          }
+          .ourmission-section img {
+            margin-top: 60px;
+            }
+      }
+
+
+
+
+   

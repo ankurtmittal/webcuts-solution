@@ -3,23 +3,27 @@
 	margin: 0;
 	padding: 0;
 }
-
- .navbar {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	position: sticky;
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body {
+    overflow-x: hidden;
+}
+ .background {
+    position: sticky;
 	top: 0;
 	cursor: pointer;
-	background-color: #333;
-	padding: 10px 20px;
-	z-index: 1000;
-} 
-
-.background {
-	background: orangered;
-	background-blend-mode: darken;
+    z-index: 1000;
+	background: linear-gradient(50deg, orangered, blue);
 	background-size: cover;
+	height: 100px;
+} 
+.navbar {	
+	 width: 100%;
+     max-width: 1340px;
+	margin: 0 auto; 
+	margin-top: 0px;
 }
 
 
@@ -28,6 +32,7 @@
 	align-items: center;
 	list-style: none;
 	margin: 0;
+	margin-left: 350px;
 	padding: 0;
 } 
 
@@ -40,14 +45,15 @@
 }
 
 .logo img {
-	width: 160px;
-	height: 70px;
+	width: 90px;
+	height: 90px;
 }
 
 .nav-list li {
 	list-style: none; 
     font-weight: bold;
 	 padding: 26px 30px; 
+	 font-size: 20px;
 }
 
 .nav-list li a {
@@ -56,7 +62,7 @@
 }
 
 .nav-list li a:hover {
-	color: blue;
+	color: white;
 }
 
 /*    hamburger menu icon  */
@@ -72,22 +78,57 @@
         display: none;
         flex-direction: column;
         width: 100%;
-        background-color: wheat;
-        position: absolute;
-        top: 90px;
-        left: 0;
+		background-color: rgb(163, 187, 245);
+        position: absolute;	
+        top: 100px;
+        margin-left: 0px;
     }
     .nav-list.open {
         display: flex;
     }
     .nav-list li {
-        text-align: center;
+        text-align: left;
         padding: 10px;
         width: 100%;
+		margin-left: 30px;
     }
     .hamburger {
         display: block;
+		margin: 10px;
     }
+	.logo img {
+		margin-left: 10px;
+	}
 }
 
+ .service-listing {
+	position: absolute;
+	background-color: rgb(163, 187, 245);
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	margin-top: 350px;
+	width: 100%;
+	max-width: 360px;
+}
+  
+  .dropdown-toggle {
+	position: relative;
+  }
+  
+  .dropdown-toggle:hover .dropdown-menu {
+	display: block;
+  }
 
+  .service-icon {
+	width : 10%;
+	height: 30px;
+  }
+
+  @media (min-width: 320px)  and (max-width: 1180px) {
+	.service-listing {
+        background-color: rgb(163, 187, 245);
+	    margin-top: 0px;
+	    width: 100%;
+		position: static;
+	}
+  }

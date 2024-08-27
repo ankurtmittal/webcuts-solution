@@ -1,0 +1,70 @@
+.main-contactus {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    width: 100%; /* Adjust width to 100% to make it responsive */
+    max-width: 1350px; /* Limit maximum width */
+    margin: 0 auto; /* Center the grid horizontally */
+  }
+  
+  .contactus-section {
+    border: 1px solid white;
+    /* width: calc(42% - 20px); 
+    max-width: 600px;  */
+    text-align: center;
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 50px;
+    transition: transform 0.3s ease;
+  }
+  .contactus-section:hover {  
+    transform: translateY(-10px); 
+    background-color: rgb(19, 16, 204);
+    color: white;
+  }
+  
+  .contactus-section img {
+    /* width: calc(90%);  */
+     height: 100px;
+    border: 1px solid #ccc;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 50%; 
+}
+
+    @media screen and (max-width:768px) {
+        .main-contactus {
+        grid-template-columns: 1fr;
+        max-width: 300px; /* Limit maximum width */
+      
+        }
+          .contactus-section {
+            width: calc(100%); 
+            margin: 0px;
+            margin-bottom: 20px;
+            margin-top: 30px;
+          }
+    }
+
+    @media screen and (min-width:769px) and (max-width:1080px) {
+      .main-contactus {
+           grid-template-columns: 1fr;
+          max-width: 500px; /* Limit maximum width */
+      
+           }
+          .contactus-section {
+            width: calc(100%); 
+            margin: 0px;
+            margin-bottom: 20px;
+            margin-top: 30px;
+          }
+     }
+
+     .enquiryform {
+        margin: 'auto';
+        /* border: 1px solid white; */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+        border-radius: 10px;
+     }
+   

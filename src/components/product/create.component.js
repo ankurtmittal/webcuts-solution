@@ -6,6 +6,8 @@ import Col from 'react-bootstrap/Col';
 import axios from 'axios'
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom'
+import Header from "../Header/header";
+
 
 export default function CreateProduct() {
   const navigate = useNavigate();
@@ -47,7 +49,8 @@ export default function CreateProduct() {
   }
 
   return (
-    <div className="container">
+     <div className="container">
+       <Header />
       <div className="row justify-content-center">
         <div className="col-12 col-sm-12 col-md-6">
           <div className="card">

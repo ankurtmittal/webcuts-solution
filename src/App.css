@@ -1,147 +1,194 @@
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-/*Filename - App.css*/
-
-
-
-
-
-
-
-
-
-
 /* slider css */
-
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
+  /* overflow-x: hidden; */
 }
-
-
 
 .slider-container {
-	width: 100%;
-	/* margin-top: 100px; */
-	margin: 0 auto;
-
-  }
-  
-  .slick-slide img {
-	width: 100%; /* Ensure images take up full width of the slider */
-	height: 500px; /* Maintain aspect ratio */
-	/* object-fit: cover; */
-	
-  }
-  @media (max-width: 768px) {
-    .slick-slide img {
-        height: 200px; /* Adjust height for smaller screens */
-    }
- }
- @media (min-width: 769px) and (max-width: 1400px) {
-    .slick-slide img {
-        height: 350px; /* Adjust height for larger screens */
-    }
+  width: 100%;
+  overflow: hidden;
+  /* Ensure that anything outside the slider's boundary is not visible */
 }
 
+.slider {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
 
+.slick-slide img {
+  width: 100%;
+  height: 600px;
+  /* max-width: 1520px;
+  margin: 0 auto;
+  object-fit: cover; */
+  /* Ensures the image covers the container without distortion */
+}
+
+.slick-prev,
+.slick-next {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  font-size: 18px;
+}
+
+.slick-prev {
+  left: 10px;
+  /* Adjust the positioning as needed */
+}
+
+.slick-next {
+  right: 10px;
+  /* Adjust the positioning as needed */
+}
+
+@media (max-width: 768px) {
+  /* * {
+   overflow-x: hidden;
+  } */
+  .slick-slide img {
+    width: 100%;
+    height: 200px;
+    /* Adjust height for smaller screens */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1400px) {
+  .slick-slide img {
+    height: 350px;
+    /* Adjust height for larger screens */
+  }
+}
+
+/* 
 .slick-prev:before,
 .slick-next:before {
   color: red;
   width: 100%;
-}
+} */
+/* .next-button {
+    right: -10px;
+    z-Index: 10;
+    display: block;
+    background-color: black;
+    width: 2%;
+ } */
 
 .service-heading {
-	text-align:center;
-	margin-top: 30px;
-	color: blue;
+  text-align: center;
+  margin-top: 30px;
+  color: blue;
 }
 
 .row {
-    display: flex;
-	  margin: 50px;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  margin: 50px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* margin-left : 150px;
+    margin-right: 150px; */
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 .section {
-    width: calc(33.33% - 20px); 
-    box-sizing: border-box;
-    padding: 20px;
-    border: 1px solid #ccc;
-	  border-radius: 5px;
-    padding: 20px;
-    background-color: #f0f0f0;
-	  text-align: center;
+  width: calc(30.33% - 60px);
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  /* border: 1px solid #ccc; */
+  border-radius: 10px;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+  /* color: black;  */
+  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
+.section:hover {
+  background-color: whitesmoke;
+  /* New background color on hover */
+  transform: translateY(-10px);
+  background-color: rgb(19, 16, 204);
+  color: white;
+}
+
+
+.section img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width:768px) {
+  .section img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width:769px) and (max-width:1080px) {
+  .section img {
+    width: 100%;
+  }
+}
 
 /* Additional styles for h1 and p elements */
 .text-big {
-    font-size: 24px;
-    margin-bottom: 10px;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
+/* .text-big:hover {
+background-color: white;
+} */
+
 .text-small {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 /* Apply styles for smaller screens */
 @media screen and (max-width:768px) {
-    .section {
-      width: calc(100% - 20px);
-      margin: 20px;
- }
+  .section {
+    width: calc(90%);
+    margin: 20px;
+  }
+
+  .row {
+    margin: 0px;
+    margin-right: 40px;
+  }
 }
 
-/* @media screen and (min-width:769px) and (max-width:1080px) {
+@media screen and (min-width:769px) and (max-width:1080px) {
   .section {
-    width: calc(40% - 20px); 
+    width: calc(90%);
     box-sizing: border-box;
-  
+    margin-right: 20px;
+    margin: 30px;
+    /* height: 450px; */
   }
-} */
+
+  .row {
+    margin: 10px;
+    /* margin-right: 40px; */
+  }
+}
+
 /*     our techonilies section start */
 .technologies-heading {
-	text-align:center;
-	margin-top: 30px;
-	color: blue;
+  text-align: center;
+  margin-top: 30px;
+  color: blue;
 }
 
 .main-techonology {
@@ -149,83 +196,146 @@
   margin: 50px;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  /* margin-left: 150px;
+  margin-right: 150px; */
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
 }
 
 .technology-section {
-  width: calc(16.66% - 20px); 
+  width: calc(16.66% - 20px);
   box-sizing: border-box;
   text-align: center;
+  margin-top: 40px;
 }
 
-.technology-section img{
-  width: 100px; 
+.technology-section img {
+  width: 100px;
+  transition: transform 0.3s ease;
 }
+
+.technology-section:hover img {
+  transform: translateY(-10px);
+  /* Adjust the amount of movement */
+}
+
 
 @media screen and (max-width:768px) {
+  .main-techonology {
+    margin-left: 30px;
+    margin-right: 10px;
+  }
+
   .technology-section {
-    width: calc(40% - 20px);
-    margin: 20px;
+    width: calc(40%);
+    margin: 10px;
     margin-left: 0px;
-}
-}
-@media screen and (min-width:769px) and (max-width:1080px) {
-  .technology-section {
-     width: calc(30% - 20px); 
-     margin: 20px;
-     margin-left: 0px;
-}
+    margin-right: 35px;
+  }
 }
 
-/*    Why choose Us Section   */
+@media screen and (min-width:769px) and (max-width:1080px) {
+  .main-techonology {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .technology-section {
+    width: calc(30% - 20px);
+    margin: 20px;
+    margin-left: 0px;
+  }
+}
+
+/* Why choose Us Section */
 .specification-heading {
-	text-align:center;
-	margin-top: 30px;
-	color: blue;
+  text-align: center;
+  margin-top: 30px;
+  color: blue;
 }
 
 .main-specification {
   display: flex;
-  margin: 50px;
-  margin-left: 150px;
-  margin-right: 150px;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
 }
 
 .specification-section {
-  width: calc(48% - 20px); 
+  width: calc(48% - 20px);
   box-sizing: border-box;
   padding: 20px;
-  background-color: #f0f0f0;
   text-align: center;
 }
 
 .specification-section img {
-  width: calc(100%); 
+  width: 100%;
   height: 250px;
+  object-fit: cover;
   box-sizing: border-box;
-  }
-  @media screen and (max-width:768px) {
-    .main-specification {
-      margin-left: 40px;
-      margin-right: 40px;
-     }
-     .specification-section {
-      width: calc(100%); 
-    }
-    .specification-section img {
-      width: calc(100%); 
-      height: 150px;
-      box-sizing: border-box;
-      }
-  }
-  @media screen and (min-width:769px) and (max-width:1080px) {
-    .main-specification {
-      margin-left: 70px;
-      margin-right: 70px;
-     }
-  }
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  /* Adding reflection or shadow effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* Adjust values as needed */
+  data-aos: fade-right;
+  data-aos-duration: 500
+}
+
 
 .vertical-line {
-  border-left: 5px solid red; /* Border ki width aur color */
+  border-left: 5px solid red;
+  height: 290px;
+}
+
+@media screen and (max-width: 768px) {
+  .main-specification {
+    flex-direction: column;
+  }
+
+  .specification-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .specification-section img {
+    height: 150px;
+  }
+
+  .vertical-line {
+    display: none;
+  }
+
+  /* Adjust order for smaller screens */
+  .main-specification:nth-child(odd) .specification-section:nth-child(1),
+  .main-specification:nth-child(even) .specification-section:nth-child(1),
+  .main-specification:nth-child(odd) .specification-section:nth-child(1),
+  .main-specification:nth-child(even) .specification-section:nth-child(1),
+  .main-specification:nth-child(odd) .specification-section:nth-child(1),
+  .main-specification:nth-child(even) .specification-section:nth-child(1) {
+    order: 1;
+  }
+
+  .main-specification:nth-child(odd) .specification-section:nth-child(2),
+  .main-specification:nth-child(even) .specification-section:nth-child(1),
+  .main-specification:nth-child(odd) .specification-section:nth-child(4),
+  .main-specification:nth-child(even) .specification-section:nth-child(3),
+  .main-specification:nth-child(odd) .specification-section:nth-child(6),
+  .main-specification:nth-child(even) .specification-section:nth-child(5) {
+    order: 2;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1480px) {
+  .main-specification {
+    margin-right: 70px;
+  }
+
+  .vertical-line {
+    margin-top: 70px;
+  }
 }

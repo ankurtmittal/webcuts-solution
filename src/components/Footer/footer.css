@@ -1,5 +1,5 @@
 .footer {
-	background-color: black;
+	background-color: blue;
 	height: 400px;
 	box-sizing: border-box;
 }
@@ -15,9 +15,12 @@
 
 .footer-main {
     display: flex;
-	margin: 50px;
+	/* margin: 50px; */
     flex-wrap: wrap;
     justify-content: space-between;
+	width: 100%; /* Adjust width to 100% to make it responsive */
+	max-width: 1340px; /* Limit maximum width */
+	margin: 0 auto; /* Center the grid horizontally */
 }
 
 .footer-section {
@@ -26,14 +29,18 @@
     padding: 20px;
   	text-align: left;
 }
+
 .footer-section img {
     width: 100px; 
     display: flex;
 	}
 
+.footer-section ui li {
+	margin-bottom: 13px;
+} 
 @media screen and (max-width:768px){
 	.footer {
-		height: 1000px;
+		height: 1100px;
 	}
 	.footer-section {
 		width: calc(100%); 
@@ -48,6 +55,6 @@
 	}
 	@media screen and (min-width:769px) and (max-width:1080px) {
 		.footer {
-		 height: 500px;
+		 height: 600px;
 		}
 	  }

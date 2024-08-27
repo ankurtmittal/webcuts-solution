@@ -1,0 +1,84 @@
+.main-android-app {
+    display: grid;
+    grid-template-columns: 1fr; 
+    justify-content: space-between;
+    width: 100%; 
+    max-width: 1250px; 
+    margin: 0 auto;
+  }
+  .first-android-row {
+   display: grid;
+   grid-template-columns: 1fr 1fr; 
+  }
+  .android-app-section {
+    width: calc(100%); 
+    box-sizing: border-box;
+    padding: 20px;
+    margin-top: 30px;
+  }
+  
+  .android-app-img-section {
+    width: calc(100%); 
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .android-app-img-section img {
+    width: calc(30%-20px); 
+    height: 325px;
+    box-sizing: border-box;
+    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); */
+    }
+    @media screen and (max-width:768px) {
+        .main-android-app {
+            grid-template-columns: 1fr;
+            margin: 0px;
+            justify-content: space-between;
+        }
+        .first-android-row {
+          grid-template-columns: 1fr;
+         }
+          .android-app-section {
+            width: calc(100%); 
+          }
+          .android-app-img-section {
+            width: calc(100%); 
+          }
+          .android-app-img-section img {
+            height: 250px;
+            }
+          /* .first-android-row:nth-child(1) .android-app-section,
+          .first-android-row:nth-child(2) .android-app-img-section {
+         order: 1; 
+        }
+         .first-android-row:nth-child(1) .android-app-img-section,
+         .first-android-row:nth-child(2) .android-app-section {
+        order: 2; 
+        } */
+
+
+  .first-android-row:nth-child(even) .android-app-section {
+    order: 1; /* Content first in odd rows */
+     }
+
+    .first-android-row:nth-child(even) .android-app-img-section {
+    order: 2; /* Image first in even rows */
+  }
+
+
+
+
+    }
+    @media screen and (min-width:769px) and (max-width:1080px) {
+        .main-android-app {
+            margin: 0px;
+            justify-content: space-between;
+            width: 95%;
+            margin-left: 20px;
+            margin-right: 20px;
+          }
+          .android-app-img-section img {
+            margin-top: 60px;
+            }
+      }

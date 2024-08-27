@@ -1,0 +1,80 @@
+.main-blog {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 100px; /* Adds gap between columns */
+  justify-content: center;
+  padding: 20px; /* Adds padding inside the grid */
+  width: 100%; /* Adjust width to 100% to make it responsive */
+  max-width: 1340px; /* Limit maximum width */
+  margin: 0 auto; /* Center the grid horizontally */
+}
+
+.blog-section {
+  width: 100%; /* Adjust width to 100% to make it responsive */
+  max-width: 600px; /* Limit maximum width */
+  border: 1px solid white;
+  margin-bottom: 20px; /* Margin bottom for spacing between sections */
+  padding: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin-right: 100px;
+}
+
+.blog-section img {
+  max-width: 100%; /* Ensure images are responsive within their containers */
+  height: auto; /* Maintain aspect ratio */
+}
+
+
+
+
+
+.blog-section img {
+  max-width: 100%; /* Ensure images are responsive within their containers */
+  height: auto; /* Maintain aspect ratio */
+}
+
+
+
+
+
+
+
+@media screen and (max-width:768px) {
+  .main-blog {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: calc(100%-20px);
+    margin-left: 0px; 
+    margin-right: 0px;
+    grid-gap: 30px; /* Adds gap between columns */
+  }      
+  .blog-section {
+    margin: 20px;
+    width: 90%;
+  }
+  .blog-section img {
+    width: 330px;
+  }
+}
+
+@media screen and (min-width:769px) and (max-width:1080px) {
+  .main-blog {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: 10px; 
+    margin-right: 10px;
+    grid-gap: 50px; /* Adds gap between columns */
+  }      
+  
+  .blog-section {
+    width: 100%;
+    padding: 10px;
+    margin-left: 90px;
+  }
+
+  .blog-section img {
+    width: 720px;
+  }
+}
+ 
