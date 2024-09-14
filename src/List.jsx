@@ -66,7 +66,7 @@ const TopSection = () => {
             </div>
             {/********* our techonolgy section start **********/}
             <div style={{ backgroundColor: '#d3d3d359' }}>
-                <h1 className="technologies-heading">   Technologies We Use  </h1>
+                <h1 className="technologies-heading">Technologies We Use  </h1>
                 <div className="main-techonology">
                     <section className="technology-section" data-aos="fade-left" data-aos-duration="1000">
                         <img src={php} alt="react" />

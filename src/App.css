@@ -5,6 +5,11 @@
   /* overflow-x: hidden; */
 }
 
+
+div#root {
+  overflow-x: hidden;
+}
+
 .slider-container {
   width: 100%;
   overflow: hidden;
@@ -186,6 +191,7 @@ background-color: white;
 
 /*     our techonilies section start */
 .technologies-heading {
+  padding-top: 20px;
   text-align: center;
   margin-top: 30px;
   color: blue;
